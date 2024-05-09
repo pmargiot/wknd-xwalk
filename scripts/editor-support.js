@@ -89,6 +89,13 @@ async function applyChanges(event) {
   return false;
 }
 
+function handleReloadPage(event) {
+  const a = document.createElement('a');
+  a.setAttribute('href', event.detail);
+  event.target.append(a);
+  a.click();
+}
+
 function updateUi(event) {
   const { detail, target } = event;
   if (!detail.selected) return;
