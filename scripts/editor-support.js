@@ -129,6 +129,7 @@ function attachEventListners(main) {
   }));
 
   main.addEventListener('aue:ui-select', updateUi);
+  main.addEventListener('extension:reloadPage', handleReloadPage);
 }
 
 attachEventListners(document.querySelector('main'));
